@@ -50,6 +50,8 @@ while (counter === computerBombe.lenght) {
     counter++;
 }
 
- console.log('Numero presente in lista, hai perso');
+console.log('Numero presente in lista, hai perso');
+ 
+
 
 
