@@ -20,7 +20,7 @@
 
 // Setup
 var numeroMax = 0;
-var possibilità = 0;  // 100 - 16
+var possibilita = 0;  // 100 - 16
 
 // Genera bombe computer e num consentiti
 var listaBombe = [];  // numeri vietati (bombe)
@@ -36,15 +36,15 @@ while (livello < 0 || livello > 2 || isNaN(livello)) {
 switch (livello) {
     case 0:
         numeroMax = 100;
-        possibilità = 84;
+        possibilita = 84;
         break;
     case 1:
         numeroMax = 80;
-        possibilità = 64;
+        possibilita = 64;
         break;
     case 2:
         numeroMax = 50;
-        possibilità = 34;
+        possibilita = 34;
 }
 
 
@@ -69,7 +69,7 @@ console.log('Lista bombe:', listaBombe);
  */
 
 // Domanda all'utente
-while ((numeriConsentiti.lenght < possibilità) && (listaBombe.includes(utente) !== true )) {
+while ((numeriConsentiti.lenght < possibilita) && (listaBombe.includes(utente) !== true )) {
      // Scelta utente
     utente = parseInt(prompt('Inserisci un numero da 1 a ' + numeroMax).trim());
     while (utente < 1 || utente > numeroMax || isNaN(utente)) {
@@ -81,7 +81,7 @@ while ((numeriConsentiti.lenght < possibilità) && (listaBombe.includes(utente) 
     controlloNumero(utente);
 
     // Raffronto possibilità
-    if (numeriConsentiti.length === possibilità) {
+    if (numeriConsentiti.length === possibilita) {
         alert('Hai vinto!');
     }
 }
