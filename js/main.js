@@ -69,7 +69,7 @@ console.log('Lista bombe:', listaBombe);
  */
 
 // Domanda all'utente
-while ((numeriConsentiti.lenght < possibilita) && (listaBombe.includes(utente) !== true )) {
+while ((numeriConsentiti.length < possibilita) && (listaBombe.includes(utente) !== true )) {
      // Scelta utente
     utente = parseInt(prompt('Inserisci un numero da 1 a ' + numeroMax).trim());
     while (utente < 1 || utente > numeroMax || isNaN(utente)) {
@@ -104,7 +104,7 @@ function numeroRandom(max) {
 function controlloNumero(numero) {
     // Se n è presente nella lista bombe
     if (listaBombe.includes(numero) === true) {
-        alert('Hai perso :( Hai provato con successo' +
+        alert('Hai perso :( Hai provato con successo ' +
             numeriConsentiti.length +
             ' volte prima di trovare la bomba');
     }
